@@ -1,0 +1,66 @@
+>> 사용자 명, email 설정
+  -. git config --global user.name "BaeByoungSul"
+  -. git config --global user.email "xyz5787@naver.com"
+
+>> 기본 브랜치명 변경
+  -. git config --global init.defaultBranch main
+
+>> 시작 
+  -. git init : local repository 생성
+  -. git status
+  -. git에서 관리하지 않아야 하는 파일은  .gitignore 파일을 생성에서 관리한다.
+      > https://git-scm.com/docs/gitignore 참조
+
+  -. git add .
+  -. git commit -m "Commit Message"
+>> git credential 정보를 리셋하는 코드 (* 관리자 권한 필요)
+  // 1.local에서 unset : 특정 저장소
+  -. git config --local --unset credential.helper 
+  // 2.global에서 unset: 시스템의 특정 사용자
+  -. git config --global --unset credential.helper 
+  // 3.system에서 unset : 시스템의 모든 사용자와 모든 저장소
+  -. git config --system --unset credential.helper
+
+출처: https://oizys.tistory.com/64 [우당탕탕 개발]
+
+
+>> GitHub에 토큰 인증 로그인:  
+  -. setting > developer >> Personal Access Token 
+     > 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
+  -. windows : 자격 증명 관리자 > windows 자격 증명 추가 및 수정
+     {
+         인터넷 또는 네트워크 주소: git:https://github.com
+         사용자 이름 : BaeByoungSul 
+         암호 : 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
+     }
+  -. SourceTree에도  추가
+     > 도구 > 옵션 > 인증
+
+>> Push
+  -. git remote show
+  -. git remote remove origin
+  -. git remote add orgin git@github.com:BaeByoungSul/my-first-git.git
+  -. git remote add origin https://github.com/BaeByoungSul/my-git-first.git
+  -. git branch -M main
+  -. git push -u origin main
+  
+   
+>> connect with SSH
+   -. ssh-keygen -t rsa -b 4096 -C "xyz5787@naver.com"
+   -. ssh-keygen -t rsa -C "xyz5787@naver.com"
+   -. ssh-agent 실행 여부 확인
+       . eval $(ssh-agent)
+       . eval "$(ssh-agent -s)"
+   -. SSH-Agent에 SSH Key 등록 하기
+       . ssh-add ~/.ssh/id_rsa
+   -. Adding a new SSH key to your GitHub account
+   -. ssh -T git@github.com
+
+     
+
+
+
+   Hi, I’m @BaeByoungSul
+👀 I’m interested in WCF and security Concept and mobile program
+🌱 I’m currently learning Security and Git
+💞️ I’m looking to collaborate on WCF
