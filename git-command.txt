@@ -39,7 +39,7 @@
 >> Push
   -. git remote show
   -. git remote remove origin
-  -. git remote add orgin git@github.com:BaeByoungSul/my-first-git.git
+  -. git remote add origin git@github.com:BaeByoungSul/my-first-git.git
   -. git remote add origin https://github.com/BaeByoungSul/my-git-first.git
   -. git branch -M main
   -. git push -u origin main
@@ -53,7 +53,11 @@
        . eval "$(ssh-agent -s)"
    -. SSH-Agent에 SSH Key 등록 하기
        . ssh-add ~/.ssh/id_rsa
+
+   -. clip < ~/.ssh/id_rsa.pub
    -. Adding a new SSH key to your GitHub account
+
+>>  Testing your SSH connection
    -. ssh -T git@github.com
 
      
