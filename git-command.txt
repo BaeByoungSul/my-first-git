@@ -13,6 +13,10 @@
 
   -. git add .
   -. git commit -m "Commit Message"
+  -. git commit -am "Commit Message"
+  -. git commit -a : 자동적으로 수정된 파일을 stage로 한 후 commit. 새로운 파일은 영향을 받지 않는다.
+
+
 >> git credential 정보를 리셋하는 코드 (* 관리자 권한 필요)
   // 1.local에서 unset : 특정 저장소
   -. git config --local --unset credential.helper 
@@ -46,11 +50,12 @@
   -. git push -u origin main
 
 >> Pull
-  -. git fetch origin > git 
-  -. git log --decorate --all --oneline
-  -. git diff HEAD origin/master
+  -. git fetch origin  :  변견정보 가져오기 
+  -. git log --decorate --all --oneline  : log확인하면 HEAD와 origin/main이 가르키고 있는 위치가 다른 걸 알수 있다
+  -. git diff HEAD origin/main  : 무엇이 변경되었는지 본다
   -. git pull origin main
-   
+
+
 >> connect with SSH
    -. ssh-keygen -t rsa -b 4096 -C "xyz5787@naver.com"
    -. ssh-keygen -t rsa -C "xyz5787@naver.com"
@@ -65,6 +70,11 @@
 
 >>  Testing your SSH connection
    -. ssh -T git@github.com
+
+
+ >> pull vs clone
+  -. git clone명령을 사용하면 로컬 저장소의 내용이 원격 저장소의 내용과 일치해진다
+  -. git pull명령은 원격 저장소의 내용을 가져와서 현재 브랜치와 병합(merge)까지 해주기 때문에, 기존에 작업했던 내용은 유지하면서 최신 코드로 업데이트할 수 있는 것이다.
 
      
 
