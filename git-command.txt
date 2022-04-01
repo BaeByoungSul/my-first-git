@@ -36,7 +36,7 @@
   -. SourceTree에도  추가
      > 도구 > 옵션 > 인증
 
->> Push
+>> Push 
   -. git remote -v
   -. git remote show
   -. git remote remove origin
@@ -44,7 +44,12 @@
   -. git remote add origin https://github.com/BaeByoungSul/my-git-first.git
   -. git branch -M main
   -. git push -u origin main
-  
+
+>> Pull
+  -. git fetch origin > git 
+  -. git log --decorate --all --oneline
+  -. git diff HEAD origin/master
+  -. git pull origin main
    
 >> connect with SSH
    -. ssh-keygen -t rsa -b 4096 -C "xyz5787@naver.com"
