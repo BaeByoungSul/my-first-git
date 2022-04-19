@@ -54,7 +54,7 @@
   -. git log --decorate --all --oneline  : log확인하면 HEAD와 origin/main이 가르키고 있는 위치가 다른 걸 알수 있다
   -. git diff HEAD origin/main  : 무엇이 변경되었는지 본다
   -. git pull origin main
-
+  -. git pull origin 브런치명 --allow-unrelated-histories ( refusing to merge unrelated histories )
 
 >> connect with SSH
    -. ssh-keygen -t rsa -b 4096 -C "xyz5787@naver.com"
