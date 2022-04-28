@@ -75,7 +75,7 @@
  >> pull vs clone
   -. git clone명령을 사용하면 로컬 저장소의 내용이 원격 저장소의 내용과 일치해진다
   -. git pull명령은 원격 저장소의 내용을 가져와서 현재 브랜치와 병합(merge)까지 해주기 때문에, 기존에 작업했던 내용은 유지하면서 최신 코드로 업데이트할 수 있는 것이다.
-
+  -. git clone  { github path}
      
 >> git-secret 설치 : 내가 생각한 것이 아님
   -. https://faun.pub/git-secrets-installation-in-windows-60a29ff1260c
