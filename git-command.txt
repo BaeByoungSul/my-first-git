@@ -15,7 +15,8 @@
   -. git commit -m "Commit Message"
   -. git commit -am "Commit Message"
   -. git commit -a : 자동적으로 수정된 파일을 stage로 한 후 commit. 새로운 파일은 영향을 받지 않는다.
-
+  -. git reset --hard : stage에 들어가 있지 않은 모든 변경내용 되돌리기
+  
 
 >> git credential 정보를 리셋하는 코드 (* 관리자 권한 필요)
   // 1.local에서 unset : 특정 저장소
