@@ -1,0 +1,63 @@
+# How to run .NET core executable app in Linux (Ubuntu)
+  - . View > Terminal  :  dotnet publish -c release -r ubuntu.16.04-x64
+  -. PowerShell :  dotnet build .\UbuntuApp1\UbuntuApp1.csproj --self-contained true -r ubuntu.18.04-x64 
+  -. PowerShell :  dotnet publish -c release --self-contained true -r ubuntu.18.04-x64 
+  -. PowerShell :  dotnet publish -c release --no-self-contained  -r ubuntu.22.04-x64 
+
+
+# Connecting to Linux an Instance
+  -. ssh -i  D:\My-Git\06.Cloud\OracleVM\ssh-key-2022-06-24.key ubuntu@146.56.155.85
+
+
+# Add an iptables rules to allow incoming connections to port 10000/TCP
+   -. iptables -L : Check all existing tables
+   -. iptables -I INPUT -p tcp --dport 9110:9230 -j ACCEPT
+   -. iptables -A INPUT -p tcp -m multiport --dports 1000,1001,1002:1500,1501:2000 -j ACCEPT
+
+# iptables permenent
+   -. apt install iptables-persistent
+   -. iptables-save > /etc/iptables/rules.v4
+
+# Copy file to Linux an instance
+   -.  scp ./* ubuntu@146.56.155.85:/home/ubuntu/bsbae/net6Test
+   -. chmod 777 실행파일
+
+#  Ubuntu Background service by screen
+  -. screen -S Session_name  : Start Screen
+  -. screen -ls View all active Screen
+  -. screen -r :  attach to last used screen
+  -. screen -x  Session_name or Session_ID:  attatch to the corresponding session
+
+#  Ubuntu keyboard shortcuts inside the  screen
+    1. ctrl + a d ( ctrl + a and then d): detach the screen, i.e.
+    2. ctrl + a esc : copy mode, i.e. you can scroll and move the cursor freely in all the directions, press enter to exit the mode
+    3. ctrl + d: exit the screen, i.e. the session is completely terminated
+    4. kill SESSION_ID : to kill the screen (you may require sudo command). It is
+
+# BBS Service Backgroud  실행
+   -. screen -S DB
+   -. ctrl + a d
+   -. screen -S File
+   -. ctrl + a d
+   -. screen -x DB
+   -. ./DBService 10.0.0.200
+   -. ctrl + a d 
+   -. screen -x File
+   -. ./FileService 10.0.0.200
+   -. ctrl + a d 
+
+# Oracle Cloud DB 
+   -. 회사에서 연결이 않됨 : 회사 방화벽 차원에서 막혀 있는것 같음
+
+
+
+scp D:\wallet.zip ubuntu@146.56.155.85:/bsbae/wallet.zip 
+  >> ubuntu@146.56.155.85: Permission denied (publickey). 
+  >> password setting : sudo passwd root ##  >> ?????????
+  >> /etc/ssh/sshd_config >> PermitRootLogin  yes 
+  >> /etc/ssh/sshd_config >> PasswordAuthentication yes 
+  >> service sshd restart
+
+  >> password setting : sudo passwd ubuntu ##  >> ???????
+
+
