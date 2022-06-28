@@ -64,13 +64,18 @@
  -. flush privileges;
  -. alter user 'bsbae'@'localhost' identified with mysql_native_password by 'wkehd124!@$';
  
-#  MySql 외부접속
+# MySql 외부접속
   -. root@bbs-project:/etc/mysql/mysql.conf.d# vi mysqld.cnf  >> bind-address 0.0.0.0
   
   -. create user 'bsbae'@'%' identified with mysql_native_password by 'Asdfqwer1234!@#$';
   -. grant  all  privileges on *.* to 'bsbae'@'%' with grant option;
  
- 
+# MySql Sample DB
+  -. https://dev.mysql.com/doc/employee/en/employees-installation.html
+  -. install MySql workbench
+  -. mysql -h?? -u bsbae -p
+  -. mysql> source .\employees.sql
+  
  
  -. sudo systemctl start mysql.service 
  -. sudo systemctl stop mysql.service 
