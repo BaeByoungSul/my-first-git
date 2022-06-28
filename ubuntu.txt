@@ -17,6 +17,11 @@
 # iptables permenent
    -. apt install iptables-persistent
    -. iptables-save > /etc/iptables/rules.v4
+   
+# iptables delete 
+   -. iptables -L --line-numbers
+   -. iptables -D INPUT 1
+
 
 # Copy file to Linux an instance
    -.  scp ./* ubuntu@146.56.155.85:/home/ubuntu/bsbae/net6Test
@@ -46,9 +51,21 @@
    -. ./FileService 10.0.0.200
    -. ctrl + a d 
 
-# install apache 
+# install apache & MySql
  -. app update
  -. apt install apache2
+ -. apt install mysql-server
+
+#  MySql 
+ -. mysql_secure_installation >> root password 설정부분 오류가 나서 > ALTER user 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'wkehd124!@$';
+ -. create user 'bsbae'@'localhost' identified with mysql_native_password by 'wkehd124!@$'
+ -. grant  all  privileges on *.* to 'bsbae'@'localhost' with grant option;
+ -. flush privileges;
+ -. alter user 'bsbae'@'localhost' identified with mysql_native_password by 'wkehd124!@$';
+ 
+ -. sudo systemctl start(stop) mysql.service 
+  
+  
 
 # Oracle Cloud DB 
    -. 회사에서 연결이 않됨 : 회사 방화벽 차원에서 막혀 있는것 같음
