@@ -12,6 +12,7 @@
 # Add an iptables rules to allow incoming connections to port 10000/TCP
    -. iptables -L : Check all existing tables
    -. iptables -I INPUT -p tcp --dport 9110:9230 -j ACCEPT
+   -. iptables -I INPUT -p tcp -m multiport --dports 80,3306 -j ACCEPT
    -. iptables -A INPUT -p tcp -m multiport --dports 1000,1001,1002:1500,1501:2000 -j ACCEPT
 
 # iptables permenent
