@@ -46,6 +46,10 @@
    -. ./FileService 10.0.0.200
    -. ctrl + a d 
 
+# install apache 
+ -. app update
+ -. apt install apache2
+
 # Oracle Cloud DB 
    -. 회사에서 연결이 않됨 : 회사 방화벽 차원에서 막혀 있는것 같음
 
