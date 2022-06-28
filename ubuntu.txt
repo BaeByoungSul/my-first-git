@@ -77,7 +77,11 @@
   -. mysql -h?? -u bsbae -p
   -. mysql> source .\employees.sql
   
- 
+# MySql 
+ -. sudo service mysql status
+ -. sudo service mysql restart
+ -. sudo service mysql stop
+ -. sudo service mysql start
  -. sudo systemctl start mysql.service 
  -. sudo systemctl stop mysql.service 
  
