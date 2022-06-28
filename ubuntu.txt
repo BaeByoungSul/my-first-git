@@ -41,6 +41,7 @@
     4. kill SESSION_ID : to kill the screen (you may require sudo command). It is
 
 # BBS Service Backgroud  실행
+   -. screen -ls 
    -. screen -S DB
    -. ctrl + a d
    -. screen -S File
