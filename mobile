@@ -1,3 +1,4 @@
 # .NET MAUI
   1. WCF 서비스 연결 오류 : System.Net.WebException: 'Cleartext HTTP traffic to 172.20.105.36 not permitted'
     >> AndroidManifest.xml : application tag에  android:usesCleartextTraffic="true" 추가
+    >> https://stackoverflow.com/questions/54818098/cleartext-http-traffic-not-permitted/54827498#54827498
