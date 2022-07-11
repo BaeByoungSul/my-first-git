@@ -1,0 +1,4 @@
+# adb 
+ -. list device >> adb devices -l
+ -. connet to device >> adb -s emulator-5554 shell
+ 
