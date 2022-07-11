@@ -8,4 +8,8 @@
     'The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter 
     System.AggregateException: 
     'One or more errors occurred. (The formatter threw an exception while trying to deserialize the message: There was an error while trying to deserialize parameter 
+   >> WCF Server 및 WCF Client의 WCF관련 Namespace를 바꿔서 발행한 오류
+   
+   
+
 https://github.com/CoreWCF/samples/commit/9067eaf3cbd57cf7c755bf1e14fef2cc3e993e0a
