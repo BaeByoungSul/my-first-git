@@ -25,6 +25,7 @@
 
 
 # Copy file to Linux an instance
+   -.  cd  D:\.....\bin\Release\net6.0\ubuntu.22.04-x64\publish\
    -.  scp ./* ubuntu@146.56.155.85:/home/ubuntu/bsbae/net6Test
    -. chmod 777 실행파일
 
