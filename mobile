@@ -1,4 +1,15 @@
-# .NET MAUI
+# .NET MAUI Binding
+  1. Binding Basic
+    >> The target is the object (and property) on which the data binding is set.
+    >> The source is the object (and property) referenced by the data binding.
+    
+  2. Binding Mode  
+    >> Default : Control 기본값
+    >> TwoWay – 데이터는 원본과 대상 간에 양방향으로 진행
+    >> OneWay – 데이터가 원본에서 대상으로 이동합니다.
+    >> OneWayToSource – 데이터가 대상에서 원본으로 이동합니다.
+    >> OneTime – 데이터가 원본에서 대상으로 전송되지만 변경되는 BindingContext 경우에만(3.0이 포함된 Xamarin.Forms 새 항목)
+
   1. WCF 서비스 연결 오류 : System.Net.WebException: 'Cleartext HTTP traffic to 172.20.105.36 not permitted'
     >> AndroidManifest.xml : application tag에  android:usesCleartextTraffic="true" 추가
     >> https://stackoverflow.com/questions/54818098/cleartext-http-traffic-not-permitted/54827498#54827498
