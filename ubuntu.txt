@@ -8,7 +8,9 @@
 # Connecting to Linux an Instance
   -. ssh -i  D:\My-Git\06.Cloud\OracleVM\ssh-key-2022-06-24.key ubuntu@146.56.155.85
 
-
+# ubuntu IP Addr 확인
+  -. hostname -I, ip addr
+ 
 # Add an iptables rules to allow incoming connections to port 10000/TCP
    -. iptables -L : Check all existing tables
    -. iptables -I INPUT -p tcp --dport 9110:9230 -j ACCEPT
