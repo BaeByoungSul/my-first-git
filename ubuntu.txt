@@ -58,7 +58,10 @@
    -. ctrl + a d 
    >> dotnet FileAppMvc.dll
    
-
+# ubuntu 명령어 
+   >> free -m : 메모리
+   >> vmstat -s : 메모리
+   
 # install apache & MySql
  -. app update
  -. apt install apache2
