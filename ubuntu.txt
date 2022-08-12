@@ -56,6 +56,8 @@
    -. screen -x File
    -. ./FileService 10.0.0.200
    -. ctrl + a d 
+   >> dotnet FileAppMvc.dll
+   
 
 # install apache & MySql
  -. app update
