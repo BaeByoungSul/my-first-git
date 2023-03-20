@@ -42,6 +42,7 @@
      > 도구 > 옵션 > 인증
 >> branch 
   -. branch 생성: git branch bugfix
+  -. branch 삭제: git branch -d bugfix
   -. branch 이동: git switch bugfix
   -. git log --oneline --all --graph
   -. git switch main >> git merge bugfix >> 충돌 ( main | MERGING ) >> 충돌파일 수정 >> git add .  >> git commit -m 'resolve confilct'
